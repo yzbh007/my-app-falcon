@@ -1,0 +1,30 @@
+.spinner-container {
+    /* 使容器占据可用空间并居中其子元素 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 根据需要设置最小高度，确保有空间居中 */
+    min-height: 100px; /* 或者 100vh 如果想全屏居中 */
+    width: 100%; /* 默认占满父容器宽度 */
+  }
+  
+  .spinner {
+    /* 默认样式，会被 style prop 中的 borderWidth 和 borderTopColor 覆盖 */
+    border: 4px solid rgba(0, 0, 0, 0.1); /* 浅灰色轨迹 */
+    border-top-color: #0d6efd; /* 活动部分颜色，会被 style prop 覆盖 */
+    border-radius: 50%; /* 使其成为圆形 */
+    width: 40px; /* 默认尺寸，会被 style prop 覆盖 */
+    height: 40px; /* 默认尺寸，会被 style prop 覆盖 */
+    animation: spin 1s linear infinite; /* 应用旋转动画 */
+  }
+  
+  /* 定义旋转动画 */
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
